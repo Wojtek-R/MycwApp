@@ -1,4 +1,4 @@
-# Laravel Simple CRUD
+# MycwApp
 
 This project use for author documentation first time using Laravel. Any input are welcome.
 
