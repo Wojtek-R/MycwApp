@@ -14,8 +14,12 @@
 /*Route::get('/', function () {
     return view('books/layout');
 });*/
-Route::get('/', 'BookController@index')->name('book');
-Route::post('/create', 'BookController@create')->name('create');
-Route::get('/updateform/{id}', 'BookController@update_form')->name('updateform');
-Route::get('/update/{id}', 'BookController@update')->name('update');
-Route::get('/delete/{id}', 'BookController@delete')->name('delete');
+Route::get('/book', 'BookController@index')->name('book');
+Route::post('/book/create', 'BookController@create')->name('create');
+Route::get('/book/updateform/{id}', 'BookController@update_form')->name('updateform');
+Route::get('/book/update/{id}', 'BookController@update')->name('update');
+Route::get('/book/delete/{id}', 'BookController@delete')->name('delete');
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
