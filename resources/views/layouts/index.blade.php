@@ -4,9 +4,11 @@
         <title>@yield('title')</title>
         
         <!-- Referencing Bootstrap CSS that is hosted locally -->
-        {{ Html::style('css/bootstrap.min.css') }}
+{{--        {{ Html::style('css/bootstrap.min.css') }}--}}
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
+    @include('components.navbar')
         <div class="container">
             @yield('content')
         </div>

@@ -3,6 +3,7 @@
 @section('title', $title)
 
 @section('content')
+
 <h1>{{ $title }}</h1>
 <form method="get" action="{{ route('update', ['id'=>$book->id]) }}">
 <div class="form-group row">
@@ -25,7 +26,7 @@
 </div>
 <div class="form-group row">
     <div class="col-sm-12 text-right">
-    <input type="submit" class="btn btn-secondary" value="Edit">
+    <input type="submit" class="btn btn-primary" value="Edit">
     </div>
 </div>
 {{ csrf_field() }}

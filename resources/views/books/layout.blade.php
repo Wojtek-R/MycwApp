@@ -3,6 +3,9 @@
 @section('title', $title)
 
 @section('content')
+
+
+
 <h1>{{ $title }}</h1>
 <table class="table table-hover">
   <thead>
@@ -23,10 +26,10 @@
             <td>{{ $book->category }}</td>
             <td>
                 <div class="btn-group btn-group-sm" role="group" aria-label="Option">
-                    <button type="button" class="btn btn-secondary" onClick="location.href='{{ route('updateform', ['id'=>$book->id]) }}'">
+                    <button type="button" class="btn btn-primary" onClick="location.href='{{ route('updateform', ['id'=>$book->id]) }}'">
                         Update
                     </button>
-                    <button type="button" class="btn btn-secondary" onClick="location.href='{{ route('delete', ['id'=>$book->id]) }}'">
+                    <button type="button" class="btn btn-primary" onClick="location.href='{{ route('delete', ['id'=>$book->id]) }}'">
                         Delete
                     </button>
                 </div>
@@ -41,7 +44,7 @@
             <td><input type="text" class="form-control" name="category" placeholder="Category"></td>
             <td>
             {{ csrf_field() }}
-            <input type="submit" class="btn btn-secondary" value="Add New">
+            <input type="submit" class="btn btn-primary" value="Add New">
             </td>
         </tr>
     </form>
